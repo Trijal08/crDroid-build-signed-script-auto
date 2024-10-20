@@ -9,7 +9,7 @@
 #read -p "Enter common name 'crdroid' (CN): " common_name
 #read -p "Enter email address 'android@android.com' (emailAddress): " email
 
-export country="Canada"
+export country="CA"
 export state="Ontario"
 export locality="Toronto"
 export organization="AOSP"
