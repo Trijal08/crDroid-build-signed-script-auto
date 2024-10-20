@@ -42,6 +42,7 @@ mkdir ~/.android-certs
 
 rm development/tools/make_key
 wget https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script/refs/heads/main/make_key_auto -O development/tools/make_key
+chmod a+x development/tools/make_key
 
 for x in bluetooth media networkstack nfc platform releasekey sdk_sandbox shared testkey verifiedboot; do \
     ./development/tools/make_key ~/.android-certs/$x "$subject"; \
