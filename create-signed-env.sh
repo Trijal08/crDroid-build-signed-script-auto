@@ -1,13 +1,21 @@
 #!/bin/bash
 
 # Prompt the user for each part of the subject line
-read -p "Enter country code 'US' (C): " country
-read -p "Enter state or province name 'California' (ST): " state
-read -p "Enter locality 'Los Angeles' (L): " locality
-read -p "Enter organization name 'crDroid' (O): " organization
-read -p "Enter organizational unit 'crDroid' (OU): " organizational_unit
-read -p "Enter common name 'crdroid' (CN): " common_name
-read -p "Enter email address 'android@android.com' (emailAddress): " email
+#read -p "Enter country code 'US' (C): " country
+#read -p "Enter state or province name 'California' (ST): " state
+#read -p "Enter locality 'Los Angeles' (L): " locality
+#read -p "Enter organization name 'crDroid' (O): " organization
+#read -p "Enter organizational unit 'crDroid' (OU): " organizational_unit
+#read -p "Enter common name 'crdroid' (CN): " common_name
+#read -p "Enter email address 'android@android.com' (emailAddress): " email
+
+export country="Canada"
+export state="Ontario"
+export locality="Toronto"
+export organization="AOSP"
+export organization_unit="Building custom ROMs"
+export common_name="crDroid"
+export email="android@android.com"
 
 # Construct the subject line
 subject="/C=${country}/ST=${state}/L=${locality}/O=${organization}/OU=${organizational_unit}/CN=${common_name}/emailAddress=${email}"
@@ -30,6 +38,9 @@ clear
 # Create Key
 echo "Press ENTER TWICE to skip password (about 10-15 enter hits total). Cannot use a password for inline signing!"
 mkdir ~/.android-certs
+
+rm development/tools/make_key
+wget https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script/refs/heads/main/make_key_auto -O development/tools/make_key
 
 for x in bluetooth media networkstack nfc platform releasekey sdk_sandbox shared testkey verifiedboot; do \
     ./development/tools/make_key ~/.android-certs/$x "$subject"; \
