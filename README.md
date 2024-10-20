@@ -11,7 +11,7 @@ This script only works for password-less keys (DO NOT SET A PASSWORD) *This is d
 
 `wget https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script/main/create-signed-env.sh`
 
-`chmod +x create-signed-env.sh`
+`chmod a+x create-signed-env.sh`
 
 `./create-signed-env.sh`
 
