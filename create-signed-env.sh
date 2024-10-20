@@ -26,6 +26,7 @@ echo "$subject"
 
 # Prompt the user to verify if the subject line is correct
 #read -p "Is the subject line correct? (y/n): " confirmation
+export confirmation="y"
 
 # Check the user's response
 if [[ $confirmation != "y" && $confirmation != "Y" ]]; then
