@@ -13,7 +13,7 @@ export country="CA"
 export state="Ontario"
 export locality="Toronto"
 export organization="AOSP"
-export organization_unit="Building custom ROMs"
+export organizational_unit="Building custom ROMs"
 export common_name="crDroid"
 export email="android@android.com"
 
