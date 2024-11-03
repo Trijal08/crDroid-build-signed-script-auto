@@ -10,7 +10,7 @@ This script only works for password-less keys (DO NOT SET A PASSWORD) *This is d
 1. Download the script in your root build directory and run it
 
 ```bash
-curl -sSf https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script-auto/main/create-signed-env.sh
+curl -sSf https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script-auto/main/create-signed-env.sh | bash
 ```
 
 2. Enter info for certificate subject line and confirm
